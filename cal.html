@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>🍊 CodeShalaByKMFL Calculator</title>
+     <!-- 🛡️ PROTECTION SCRIPT - HEAD MEIN SABSE UPAR -->
+    <script>
+    (function() {
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || e.keyCode === 123 ||
+                (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+                (e.ctrlKey && ['U','S'].includes(e.key))) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        }, true);
+
+        setInterval(function() {
+            var w = window.outerWidth - window.innerWidth;
+            var h = window.outerHeight - window.innerHeight;
+            if (w > 160 || h > 160) {
+                document.body.innerHTML = '<div style="text-align:center;padding:50px;font-family:sans-serif;background:#000;color:#f00;height:100vh;"><h1>⛔ Access Denied</h1><p>Inspecting is not allowed on this page.</p></div>';
+            }
+        }, 500);
+
+        setInterval(() => { debugger; }, 100);
+        setInterval(() => console.clear(), 1000);
+
+        document.addEventListener('selectstart', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+    })();
+    </script>
     <style>
         :root {
             --orange-light: #fff5eb;
